@@ -1123,4 +1123,80 @@ video {
     flex: 1 1 100%;
   }
 }
+/* ================================
+   MOBILE MODE LANDSCAPE OPTIMISATION
+   ================================ */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+
+  /* Réduit les marges globales */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* empêche le scroll vertical */
+  }
+
+  .app-shell {
+    margin: 0;
+    border-radius: 0;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Player plus compact */
+  .player-shell {
+    min-height: 150px;      /* au lieu de 260px */
+    height: 48vh;           /* prend moins de hauteur */
+  }
+
+  /* Top-bar plus fine */
+  .top-bar {
+    padding: 2px 6px;
+    gap: 4px;
+  }
+
+  .banner-img {
+    height: 40px; /* plus petit */
+  }
+
+  /* Sidebar adaptée pour paysage */
+  .sidebar {
+    max-width: 40vw;
+  }
+
+  /* Bottom bar compactée */
+  .bottom-bar {
+    padding: 4px 6px;
+    gap: 4px;
+  }
+
+  .nav-btn {
+    padding: 4px 6px;
+    font-size: 9px;
+  }
+
+  .now-playing {
+    padding: 4px 8px;
+  }
+
+  .np-logo {
+    width: 40px;
+    height: 22px;
+  }
+
+  .np-title {
+    font-size: 11px;
+  }
+
+  .np-sub {
+    font-size: 8px;
+  }
+
+  /* Empêche la page de dépasser */
+  .main {
+    padding: 4px;
+    overflow: hidden;
+  }
+}
 
