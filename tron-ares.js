@@ -1038,52 +1038,8 @@ videoEl.addEventListener('error', () => {
     listType: 'iframe'
   };
 
-  const demoIframe3 = {
-    id: 'demo-iframe-3',
-    name: 'Wikipedia',
-    url: 'https://www.wikipedia.org',
-    logo: deriveLogoFromName('W'),
-    group: 'Demo Overlay',
-    isIframe: true,
-    isFavorite: false,
-    listType: 'iframe'
-  };
-
-  const demoIframe4 = {
-    id: 'demo-iframe-4',
-    name: 'YouTube Autoplay',
-    url: 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1&mute=1',
-    logo: deriveLogoFromName('Y'),
-    group: 'Demo Overlay',
-    isIframe: true,
-    isFavorite: false,
-    listType: 'iframe'
-  };
-
-  const demoIframe5 = {
-    id: 'demo-iframe-5',
-    name: 'Météo Paris',
-    url: 'https://forecast7.com/en/48d86n2d35/paris/',
-    logo: deriveLogoFromName('P'),
-    group: 'Météo',
-    isIframe: true,
-    isFavorite: false,
-    listType: 'iframe'
-  };
-
-  const demoIframe6 = {
-    id: 'demo-iframe-6',
-    name: 'Radio Alfa',
-    url: 'https://vsalema.github.io/ipodfm/',
-    logo: { type: 'image', value: 'https://vsalema.github.io/ipodfm/img/Radio_Alfa.png' },
-    group: 'Radio',
-    isIframe: true,
-    isFavorite: false,
-    listType: 'iframe'
-  };
-
   demoChannels.forEach(ch => channels.push(ch));
-  iframeItems.push(demoIframe1, demoIframe2, demoIframe3, demoIframe4, demoIframe5, demoIframe6);
+  iframeItems.push(demoIframe1, demoIframe2); 
   renderLists();
   updateNowPlaying(null, 'IDLE');
 })();
@@ -1093,3 +1049,68 @@ videoEl.addEventListener('error', () => {
 })();
 
 loadFrM3u('https://vsalema.github.io/tvpt4/css/playlist-tvf-r.m3u');
+
+const customOverlays = [
+  
+  { title: "CMTV", logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/cmtv.png", url: "//popcdn.day/player.php?stream=CMTVPT" },
+
+  { title: "TVI",  logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/TVI.png", url: "https://vsalema.github.io/tvi2/" },
+
+  { title: "TVIR", logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/tvir.jpg", url: "https://vsalema.github.io/tvi-reality/" },
+
+  { title: "TVIF", logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/tvif.png", url: "https://vsalema.github.io/tvi-ficcao/" },
+
+  { title: "TVIA", logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/tvia.png", url: "https://vsalema.github.io/tvi-africa/" },
+
+  { title: "SIC",  logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/sic.jpg", url: "https://vsalema.github.io/sic/" },
+
+  { title: "CNN",  logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/cnn.png", url: "https://vsalema.github.io/CNN/" },
+
+  { title: "RTP1", logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/rtp1.jpg", url: "https://vsalema.github.io/play/?https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8" },
+
+  { title: "RTPN", logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/rtpn.png", url: "https://vsalema.github.io/play/?https://streaming-live.rtp.pt/livetvhlsDVR/rtpnHDdvr.smil/playlist.m3u8?DVR" },
+
+  { title: "RTPI", logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/rtpi.jpg", url: "https://vsalema.github.io/play/?https://streaming-live.rtp.pt/liverepeater/rtpi.smil/playlist.m3u8" },
+
+  { title: "BTV", logo: "https://vsalema.github.io/StreamPilot-X-Studio-S/logos/btv.svg", url: "//popcdn.day/go.php?stream=BTV1" },
+
+  { title: "SCP", logo: "https://pplware.sapo.pt/wp-content/uploads/2017/06/scp_00.jpg", url: "//popcdn.day/go.php?stream=SPT1" },
+
+  { title: "11",  logo: "https://www.zupimages.net/up/24/13/qj99.jpg", url: "https://popcdn.day/go.php?stream=Canal11" },
+
+  { title: "BOLA", logo: "https://www.telesatellite.com/images/actu/a/abolatv.jpg", url: "//popcdn.day/go.php?stream=ABOLA" },
+
+  { title: "Sport tv 1", logo: "https://cdn.brandfetch.io/idKvjRibkN/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B", url: "//popcdn.day/go.php?stream=SPT1" },
+
+  { title: "Sport tv 2", logo: "https://cdn.brandfetch.io/idKvjRibkN/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B", url: "//popcdn.day/go.php?stream=SPT2" },
+
+  { title: "Sport tv 3", logo: "https://cdn.brandfetch.io/idKvjRibkN/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B", url: "//popcdn.day/go.php?stream=SPT3" },
+
+  { title: "Sport tv 4", logo: "https://cdn.brandfetch.io/idKvjRibkN/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B", url: "//popcdn.day/go.php?stream=SPT4" },
+
+  { title: "Sport tv 5", logo: "https://cdn.brandfetch.io/idKvjRibkN/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B", url: "//popcdn.day/go.php?stream=SPT5" },
+
+  { title: "DAZN 1 PT",  logo: "https://upload.wikimedia.org/wikipedia/commons/7/71/DAZN_logo.svg", url: "//popcdn.day/go.php?stream=ELEVEN1" },
+
+  { title: "DAZN 2 PT",  logo: "https://upload.wikimedia.org/wikipedia/commons/7/71/DAZN_logo.svg", url: "//popcdn.day/go.php?stream=ELEVEN2" },
+
+  { title: "DAZN 3 PT",  logo: "https://upload.wikimedia.org/wikipedia/commons/7/71/DAZN_logo.svg", url: "//popcdn.day/go.php?stream=ELEVEN3" },
+
+  { title: "DAZN 4 PT",  logo: "https://upload.wikimedia.org/wikipedia/commons/7/71/DAZN_logo.svg", url: "//popcdn.day/go.php?stream=ELEVEN4" },
+
+ { title: "DAZN 5 PT",  logo: "https://upload.wikimedia.org/wikipedia/commons/7/71/DAZN_logo.svg", url: "//popcdn.day/go.php?stream=ELEVEN5" }
+];
+customOverlays.forEach((item, idx) => {
+  iframeItems.push({
+    id: "custom-ov-" + (idx + 1),
+    name: item.title,
+    url: item.url,
+    logo: { type: "image", value: item.logo },
+    group: "Overlay",
+    isIframe: true,
+    isFavorite: false
+  });
+});
+
+renderIframeList();
+
